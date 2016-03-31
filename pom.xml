@@ -7,7 +7,7 @@
     <version>0.1-SNAPSHOT</version>
 
     <name>ZK Sortable</name>
-    <description>ZK wrapper for Sortable</description>
+    <description>ZK wrapper for Sortable (https://github.com/RubaXa/Sortable)</description>
     <url>https://github.com/connollyst/zksortable</url>
 
     <scm>
