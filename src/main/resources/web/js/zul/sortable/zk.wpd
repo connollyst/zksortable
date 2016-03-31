@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="zul.sortable" language="xul/html">
+    <script src="lib/sortable.min.js"/>
+    <script src="lib/jquery.binding.js"/>
+    <widget name="Sortable"/>
+</package>

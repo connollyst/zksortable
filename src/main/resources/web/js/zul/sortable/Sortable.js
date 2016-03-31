@@ -1,0 +1,1 @@
+zul.sortable.Sortable = zk.$extends(zk.Widget, {});
