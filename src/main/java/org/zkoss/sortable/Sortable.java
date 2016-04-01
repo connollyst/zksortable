@@ -1,5 +1,8 @@
 package org.zkoss.sortable;
 
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.sys.ComponentCtrl;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 import org.zkoss.zul.impl.XulElement;
 
@@ -9,6 +12,17 @@ import java.io.IOException;
  * @author Sean Connolly
  */
 public class Sortable extends XulElement {
+
+    static {
+        addClientEvent(Sortable.class, SortableEvents.ON_START, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_END, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_ADD, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_UPDATE, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_SORT, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_REMOVE, ComponentCtrl.CE_IMPORTANT);
+        addClientEvent(Sortable.class, SortableEvents.ON_FILTER, ComponentCtrl.CE_IMPORTANT);
+
+    }
 
     private String group;
     private Integer animation;
@@ -35,12 +49,14 @@ public class Sortable extends XulElement {
             smartUpdate("_draggable", draggable);
         }
     }
+
     public void setHandle(String handle) {
         if (this.handle == null || handle == null || !this.handle.equals(handle)) {
             this.handle = handle;
             smartUpdate("_handle", handle);
         }
     }
+
     @Override
     protected void renderProperties(ContentRenderer renderer) throws IOException {
         super.renderProperties(renderer);
