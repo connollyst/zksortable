@@ -18,6 +18,20 @@
             <mold-name>default</mold-name>
             <mold-uri>mold/sortable.js</mold-uri>
         </mold>
+        <mold>
+            <mold-name>list</mold-name>
+            <mold-uri>mold/sortablelist.js</mold-uri>
+        </mold>
+    </component>
+
+    <component>
+        <component-name>sortableitem</component-name>
+        <component-class>org.zkoss.sortable.SortableItem</component-class>
+        <widget-class>zul.sortable.SortableItem</widget-class>
+        <mold>
+            <mold-name>default</mold-name>
+            <mold-uri>mold/sortableitem.js</mold-uri>
+        </mold>
     </component>
 
 </language-addon>

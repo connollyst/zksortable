@@ -1,8 +1,8 @@
 <zk xmlns:n="native">
 
-    <style src="style.css"/>
     <style src="http://rubaxa.github.io/Sortable/st/app.css"/>
     <style src="http://fonts.googleapis.com/css?family=Roboto:300"/>
+    <style src="style.css"/>
 
     <div sclass="container">
         <div style="padding: 80px 150px 0; height: 160px;">
@@ -12,7 +12,31 @@
             <n:h1>The JavaScript library for modern browsers and touch devices. In ZK.</n:h1>
         </div>
     </div>
-
+    <!-- Connected lists -->
+    <div sclass="container" style="height: 520px">
+        <div sclass="layer block" style="left: 14.5%; top: 0; width: 37%">
+            <div sclass="layer title">List A</div>
+            <sortable mold="list" group="words" animation="150" sclass="block__list block__list_words">
+                <sortableitem>бегемот</sortableitem>
+                <sortableitem>корм</sortableitem>
+                <sortableitem>кровать</sortableitem>
+                <sortableitem>антон</sortableitem>
+                <sortableitem>сало</sortableitem>
+                <sortableitem>железосталь</sortableitem>
+                <sortableitem>валик</sortableitem>
+                <sortableitem>краб</sortableitem>
+            </sortable>
+        </div>
+        <div sclass="layer block" style="left: 58%; top: 143px; width: 40%;">
+            <div sclass="layer title">List B</div>
+            <sortable mold="list" group="words" animation="150" sclass="block__list block__list_tags">
+                <sortableitem>казнить</sortableitem>
+                <sortableitem>,</sortableitem>
+                <sortableitem>нельзя</sortableitem>
+                <sortableitem>помиловать</sortableitem>
+            </sortable>
+        </div>
+    </div>
     <!-- Multi connected lists-->
     <div sclass="container">
         <sortable id="multi" style="margin-left: 30px" animation="150" draggable=".tile" handle=".tile__name">

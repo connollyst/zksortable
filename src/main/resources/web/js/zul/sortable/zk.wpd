@@ -3,4 +3,5 @@
     <script src="lib/sortable.min.js"/>
     <script src="lib/jquery.binding.js"/>
     <widget name="Sortable"/>
+    <widget name="SortableItem"/>
 </package>
