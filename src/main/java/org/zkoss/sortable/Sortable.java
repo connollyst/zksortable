@@ -12,6 +12,8 @@ public class Sortable extends XulElement {
 
     private String group;
     private Integer animation;
+    private String draggable;
+    private String handle;
 
     public void setGroup(String group) {
         if (this.group == null || group == null || !this.group.equals(group)) {
@@ -27,11 +29,25 @@ public class Sortable extends XulElement {
         }
     }
 
+    public void setDraggable(String draggable) {
+        if (this.draggable == null || draggable == null || !this.draggable.equals(draggable)) {
+            this.draggable = draggable;
+            smartUpdate("_draggable", draggable);
+        }
+    }
+    public void setHandle(String handle) {
+        if (this.handle == null || handle == null || !this.handle.equals(handle)) {
+            this.handle = handle;
+            smartUpdate("handle", handle);
+        }
+    }
     @Override
     protected void renderProperties(ContentRenderer renderer) throws IOException {
         super.renderProperties(renderer);
         render(renderer, "group", group);
         render(renderer, "animation", animation);
+        render(renderer, "_draggable", draggable);
+        render(renderer, "handle", handle);
     }
 
 }
