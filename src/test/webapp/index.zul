@@ -1,5 +1,20 @@
-<sortable>
-    <div>Hello</div>
-    <div>World</div>
-    <div>!!!</div>
-</sortable>
+<zk>
+    <sortable group="all" animation="500">
+        <div>Hello</div>
+        <div>World</div>
+        <div>!!!</div>
+    </sortable>
+
+    <sortable group="all" animation="10">
+        <div>Hello2</div>
+        <div>World2</div>
+        <div>!!!2</div>
+    </sortable>
+
+
+    <sortable>
+        <div>Hello3</div>
+        <div>World3</div>
+        <div>!!!3</div>
+    </sortable>
+</zk>
