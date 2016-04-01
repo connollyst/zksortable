@@ -1,4 +1,4 @@
-package org.zkoss.typeahead;
+package org.zkoss.sortable;
 
 /**
  * The version of the language addon.<br>
