@@ -12,10 +12,6 @@ zul.sortable.Sortable = zk.$extends(zk.Widget, {
     },
     bind_: function () {
         this.$supers(zul.sortable.Sortable, 'bind_', arguments);
-        console.log('_group:     ' + this.__group);
-        console.log('_animation: ' + this.__animation);
-        console.log('_draggable: ' + this.__draggable);
-        console.log('_handle:    ' + this.__handle);
         var widget = this;
         var config = {
             group: this.__group,

@@ -1,7 +1,5 @@
 package org.zkoss.sortable;
 
-import org.zkoss.zk.ui.event.Event;
-import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.sys.ComponentCtrl;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 import org.zkoss.zul.impl.XulElement;
@@ -21,7 +19,6 @@ public class Sortable extends XulElement {
         addClientEvent(Sortable.class, SortableEvents.ON_SORT, ComponentCtrl.CE_IMPORTANT);
         addClientEvent(Sortable.class, SortableEvents.ON_REMOVE, ComponentCtrl.CE_IMPORTANT);
         addClientEvent(Sortable.class, SortableEvents.ON_FILTER, ComponentCtrl.CE_IMPORTANT);
-
     }
 
     private String group;
