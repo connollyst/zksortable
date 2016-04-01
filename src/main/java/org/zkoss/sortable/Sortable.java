@@ -18,14 +18,14 @@ public class Sortable extends XulElement {
     public void setGroup(String group) {
         if (this.group == null || group == null || !this.group.equals(group)) {
             this.group = group;
-            smartUpdate("group", group);
+            smartUpdate("_group", group);
         }
     }
 
     public void setAnimation(Integer animation) {
         if (this.animation == null || animation == null || !this.animation.equals(animation)) {
             this.animation = animation;
-            smartUpdate("animation", animation);
+            smartUpdate("_animation", animation);
         }
     }
 
@@ -38,16 +38,16 @@ public class Sortable extends XulElement {
     public void setHandle(String handle) {
         if (this.handle == null || handle == null || !this.handle.equals(handle)) {
             this.handle = handle;
-            smartUpdate("handle", handle);
+            smartUpdate("_handle", handle);
         }
     }
     @Override
     protected void renderProperties(ContentRenderer renderer) throws IOException {
         super.renderProperties(renderer);
-        render(renderer, "group", group);
-        render(renderer, "animation", animation);
+        render(renderer, "_group", group);
+        render(renderer, "_animation", animation);
         render(renderer, "_draggable", draggable);
-        render(renderer, "handle", handle);
+        render(renderer, "_handle", handle);
     }
 
 }
