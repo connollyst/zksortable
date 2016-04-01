@@ -1,5 +1,9 @@
 <zk xmlns:n="native">
+
+    <style src="style.css"/>
     <style src="http://rubaxa.github.io/Sortable/st/app.css"/>
+    <style src="http://fonts.googleapis.com/css?family=Roboto:300"/>
+
     <div sclass="container">
         <div style="padding: 80px 150px 0; height: 160px;">
             <a sclass="logo" href="https://github.com/RubaXa/Sortable">
