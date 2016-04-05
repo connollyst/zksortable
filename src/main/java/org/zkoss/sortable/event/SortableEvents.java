@@ -43,7 +43,7 @@ public final class SortableEvents {
 
     private static SortableItem getSortableItem(AuRequest request, String key) {
         Component component = getComponent(request, key);
-        if (component != null && component instanceof SortableItem) {
+        if (component != null && SortableItem.class.isAssignableFrom(component.getClass())) {
             return (SortableItem) component;
         } else {
             return null;
@@ -56,7 +56,7 @@ public final class SortableEvents {
 
     private static Sortable getSortable(AuRequest request, String key) {
         Component component = getComponent(request, key);
-        if (component != null && component instanceof Sortable) {
+        if (component != null && Sortable.class.isAssignableFrom(component.getClass())) {
             return (Sortable) component;
         } else {
             return null;
