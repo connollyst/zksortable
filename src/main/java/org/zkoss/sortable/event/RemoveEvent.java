@@ -22,9 +22,9 @@ public class RemoveEvent extends Event {
 
     private final int oldIndex;
     private final int newIndex;
-    private final SortableItem item;
+    private final Component item;
 
-    public RemoveEvent(String name, Component target, int oldIndex, int newIndex, SortableItem item) {
+    public RemoveEvent(String name, Component target, int oldIndex, int newIndex, Component item) {
         super(name, target);
         this.oldIndex = oldIndex;
         this.newIndex = newIndex;
@@ -39,7 +39,7 @@ public class RemoveEvent extends Event {
         return newIndex;
     }
 
-    public SortableItem getItem() {
+    public Component getItem() {
         return item;
     }
 

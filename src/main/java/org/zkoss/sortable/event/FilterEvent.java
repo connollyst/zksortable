@@ -16,15 +16,15 @@ public class FilterEvent extends Event {
         return new FilterEvent(request.getCommand(), request.getComponent(), SortableEvents.getItem(request));
     }
 
-    private final SortableItem item;
+    private final Component item;
 
-    public FilterEvent(String name, Component target, SortableItem item) {
+    public FilterEvent(String name, Component target, Component item) {
         super(name, target);
         this.item = item;
     }
 
 
-    public SortableItem getItem() {
+    public Component getItem() {
         return item;
     }
 

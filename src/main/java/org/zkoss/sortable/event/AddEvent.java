@@ -23,10 +23,10 @@ public class AddEvent extends Event {
 
     private final int oldIndex;
     private final int newIndex;
-    private final SortableItem item;
+    private final Component item;
     private final Sortable from;
 
-    public AddEvent(String name, Component target, int oldIndex, int newIndex, SortableItem item, Sortable from) {
+    public AddEvent(String name, Component target, int oldIndex, int newIndex, Component item, Sortable from) {
         super(name, target);
         this.oldIndex = oldIndex;
         this.newIndex = newIndex;
@@ -42,7 +42,7 @@ public class AddEvent extends Event {
         return newIndex;
     }
 
-    public SortableItem getItem() {
+    public Component getItem() {
         return item;
     }
 

@@ -1,7 +1,6 @@
 package org.zkoss.sortable.event;
 
 import org.zkoss.sortable.Sortable;
-import org.zkoss.sortable.SortableItem;
 import org.zkoss.zk.au.AuRequest;
 import org.zkoss.zk.au.AuRequests;
 import org.zkoss.zk.ui.Component;
@@ -37,17 +36,8 @@ public final class SortableEvents {
         return AuRequests.getInt(request.getData(), key, -1);
     }
 
-    static SortableItem getItem(AuRequest request) {
-        return getSortableItem(request, "item");
-    }
-
-    private static SortableItem getSortableItem(AuRequest request, String key) {
-        Component component = getComponent(request, key);
-        if (component != null && SortableItem.class.isAssignableFrom(component.getClass())) {
-            return (SortableItem) component;
-        } else {
-            return null;
-        }
+    static Component getItem(AuRequest request) {
+        return getComponent(request, "item");
     }
 
     static Sortable getFrom(AuRequest request) {
