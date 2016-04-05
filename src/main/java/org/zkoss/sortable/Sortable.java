@@ -1,5 +1,8 @@
 package org.zkoss.sortable;
 
+import org.zkoss.sortable.event.*;
+import org.zkoss.zk.au.AuRequest;
+import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.sys.ComponentCtrl;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 import org.zkoss.zul.impl.XulElement;
@@ -62,5 +65,27 @@ public class Sortable extends XulElement {
         render(renderer, "_draggable", draggable);
         render(renderer, "_handle", handle);
     }
+
+    @Override
+    public void service(AuRequest request, boolean everError) {
+        if (request.getCommand().equals(SortableEvents.ON_START)) {
+            Events.postEvent(StartEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_END)) {
+            Events.postEvent(EndEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_ADD)) {
+            Events.postEvent(AddEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_REMOVE)) {
+            Events.postEvent(RemoveEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_UPDATE)) {
+            Events.postEvent(UpdateEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_SORT)) {
+            Events.postEvent(SortEvent.get(request));
+        } else if (request.getCommand().equals(SortableEvents.ON_FILTER)) {
+            Events.postEvent(FilterEvent.get(request));
+        } else {
+            super.service(request, everError);
+        }
+    }
+
 
 }

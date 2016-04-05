@@ -20,7 +20,9 @@ zul.sortable.Sortable = zk.$extends(zk.Widget, {
             handle: this.__handle,
             // dragging started
             onStart: function (event) {
-                widget.fire('onStart', event.oldIndex);
+                widget.fire('onStart', {
+                    oldIndex: event.oldIndex
+                });
             },
             // dragging ended
             onEnd: function (event) {
